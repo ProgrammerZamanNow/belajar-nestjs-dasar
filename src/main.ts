@@ -20,6 +20,7 @@ async function bootstrap() {
 
   app.useGlobalFilters(new ValidationFilter());
   // app.useGlobalPipes()
+  // app.useGlobalInterceptors(...)
 
   const configService = app.get(ConfigService);
   await app.listen(configService.get('PORT'));
