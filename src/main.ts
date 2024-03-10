@@ -19,6 +19,7 @@ async function bootstrap() {
   app.engine('html', mustache());
 
   app.useGlobalFilters(new ValidationFilter());
+  // app.useGlobalPipes()
 
   const configService = app.get(ConfigService);
   await app.listen(configService.get('PORT'));
