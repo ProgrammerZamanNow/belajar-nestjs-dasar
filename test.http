@@ -9,4 +9,4 @@ Content-Type: application/json
 ###
 
 GET http://localhost:8000/api/users/current
-x-username: 100
+x-username: 1
