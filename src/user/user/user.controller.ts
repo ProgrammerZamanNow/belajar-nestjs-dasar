@@ -15,7 +15,6 @@ import {
   Req,
   Res,
   UseFilters,
-  UseGuards,
   UseInterceptors,
   UsePipes,
 } from '@nestjs/common';
@@ -34,10 +33,8 @@ import {
 import { ValidationPipe } from '../../validation/validation.pipe';
 import { TimeInterceptor } from '../../time/time.interceptor';
 import { Auth } from '../../auth/auth.decorator';
-import { RoleGuard } from '../../role/role.guard';
 import { Roles } from '../../role/roles.decorator';
 
-@UseGuards(RoleGuard)
 @Controller('/api/users')
 export class UserController {
   constructor(
